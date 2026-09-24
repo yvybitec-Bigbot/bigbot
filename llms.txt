@@ -1,0 +1,35 @@
+# BIGBOT + Bot Vault Armor
+
+> Open-source PulseChain BIGBOT ERC-20 and Bot Vault Armor (bot wallet security). MIT. Org: yvybitec-Bigbot.
+
+## Token (mainnet)
+
+- Chain: PulseChain, chainId 369
+- BIGBOT: 0xeb6F7B997c0020f5C0334815d9BEAAB661bCfEf6
+- Fixed supply 8,315,002,026 (6 decimals); no owner; no tax
+- Source: /contracts/token/BigBot.sol
+- Compiler: solc 0.8.20, optimizer 200 runs
+- Explorer: https://scan.pulsechain.com/address/0xeb6F7B997c0020f5C0334815d9BEAAB661bCfEf6
+
+## Vault Armor (testnet only)
+
+- Chain: PulseChain Testnet V4, chainId 943
+- Factory: 0xa39f82C2C3efDa612f77238A12aA2a694aFD09c9
+- Vault: 0x3A92c476FC72a83876da2FE9fa2acba2FCc2D297
+- Mainnet: pending (not deployed)
+- Model: operator != keyMaster; arm with signal payment; caps; delay; decoy trap; no upgrade
+- Source: /contracts/vault/
+- Descriptor: /.well-known/bigbot-vault.json
+
+## Docs
+
+- /README.md
+- /AGENTS.md
+- /docs/BOT_VAULT_ARMOR_v1.md
+- /docs/BIGBOT_KEY_RAIL_v0.md
+- /deployments/addresses.json
+- /abis/
+
+## Optional
+
+- /contracts/airdrop/MerkleDistributor.sol (no recipient lists in repo)

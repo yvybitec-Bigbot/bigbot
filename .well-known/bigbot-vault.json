@@ -1,0 +1,117 @@
+{
+  "schema": "bigbot.protocol.vaultArmor.v1",
+  "topic": "protocol.vaultArmor.v1",
+  "audience": "bots",
+  "humanUI": false,
+  "license": "MIT",
+  "repository": "https://github.com/yvybitec-Bigbot/bigbot",
+  "token": {
+    "status": "mainnet",
+    "label": "BIGBOT ERC-20 on PulseChain mainnet",
+    "network": {
+      "name": "PulseChain",
+      "chainId": 369,
+      "explorer": "https://scan.pulsechain.com",
+      "native": "PLS"
+    },
+    "address": "0xeb6F7B997c0020f5C0334815d9BEAAB661bCfEf6",
+    "symbol": "BIGBOT",
+    "name": "BigBot",
+    "decimals": 6,
+    "totalSupplyHuman": 8315002026,
+    "deployer": "0x44f4F9F703fCA7A81a108e6485d391476F2c30B9",
+    "deployTxHash": "0xf5963f88359f6d7b9135c9f9ed1539234b4741913cdc1a6ab4592800bfa7154b",
+    "compiler": {
+      "solc": "0.8.20",
+      "optimizer": true,
+      "optimizerRuns": 200
+    },
+    "properties": {
+      "fixedSupply": true,
+      "ownerPowers": false,
+      "tax": false,
+      "mintable": false,
+      "pausable": false,
+      "blacklist": false
+    },
+    "explorerUrl": "https://scan.pulsechain.com/address/0xeb6F7B997c0020f5C0334815d9BEAAB661bCfEf6"
+  },
+  "vaultArmor": {
+    "status": "testnet_only",
+    "label": "Bot Vault Armor v1 \u2014 PulseChain Testnet V4 ONLY (mainnet pending)",
+    "mainnetDeployed": false,
+    "network": {
+      "name": "PulseChain Testnet V4",
+      "chainId": 943,
+      "rpc": [
+        "https://rpc.v4.testnet.pulsechain.com",
+        "https://pulsechain-testnet-rpc.publicnode.com"
+      ],
+      "explorer": "https://scan.v4.testnet.pulsechain.com",
+      "native": "tPLS"
+    },
+    "addresses": {
+      "factory": "0xa39f82C2C3efDa612f77238A12aA2a694aFD09c9",
+      "vault": "0x3A92c476FC72a83876da2FE9fa2acba2FCc2D297",
+      "signalToken": "0xeb6F7B997c0020f5C0334815d9BEAAB661bCfEf6",
+      "treasuryToken": "0x7dBD7179838ae4Ada8DcEcFd18F68BE9AB4EAEA7",
+      "signalSymbol": "mSIG",
+      "treasurySymbol": "mTREAS"
+    },
+    "roles": {
+      "operator": "0x44f4F9F703fCA7A81a108e6485d391476F2c30B9",
+      "keyMaster": "0x1355d45fe2389eD8d5a5FA81e07259CF82C76305",
+      "trapAddress": "0x2fe9e73a524fE09bD7758D2F25aF9b4B70f2D865",
+      "allowedExit": "0xF17bef05650C80380754173918535C13BF7F938C",
+      "signalSink": "0x44f4F9F703fCA7A81a108e6485d391476F2c30B9"
+    },
+    "params": {
+      "minArmDelay": 45,
+      "armTTL": 600,
+      "maxWithdrawBpsPerArm": 5000,
+      "maxArmsPerDay": 10,
+      "signalAmount": 1000000,
+      "signalDecimals": 6
+    },
+    "features": [
+      "operator != keyMaster (immutable)",
+      "BIGBOT/signal payment arms withdrawals",
+      "per-arm caps (bps of TVL)",
+      "optional minArmDelay",
+      "decoy trap (emergencyWithdraw/ownerWithdraw/migrate -> trapAddress)",
+      "no upgradeable proxy",
+      "keyMaster tripwire freeze"
+    ],
+    "limits": {
+      "doesNotProtect": "attacker controlling both operator and keyMaster with allowlisted exit",
+      "mainnet": false,
+      "note": "Testnet V4 reference deploy; mainnet not published yet"
+    },
+    "events": {
+      "factory": [
+        "VaultCreated"
+      ],
+      "vault": [
+        "Deposited",
+        "Armed",
+        "Withdrawn",
+        "TrapTriggered",
+        "Frozen"
+      ]
+    },
+    "discovery": {
+      "onChain": "index VaultCreated from factory",
+      "wellKnown": "/.well-known/bigbot-vault.json",
+      "topic": "protocol.vaultArmor.v1"
+    },
+    "explorerUrls": {
+      "factory": "https://scan.v4.testnet.pulsechain.com/address/0xa39f82C2C3efDa612f77238A12aA2a694aFD09c9",
+      "vault": "https://scan.v4.testnet.pulsechain.com/address/0x3A92c476FC72a83876da2FE9fa2acba2FCc2D297"
+    }
+  },
+  "abiPaths": {
+    "BigBot": "abis/BigBot.json",
+    "BotVault": "abis/BotVault.json",
+    "BotVaultFactory": "abis/BotVaultFactory.json"
+  }
+}

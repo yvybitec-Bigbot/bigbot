@@ -1,0 +1,88 @@
+{
+  "bigbotToken": {
+    "status": "mainnet",
+    "network": {
+      "name": "PulseChain",
+      "chainId": 369,
+      "rpc": [
+        "https://rpc.pulsechain.com",
+        "https://pulsechain-rpc.publicnode.com"
+      ],
+      "explorer": "https://scan.pulsechain.com",
+      "native": "PLS"
+    },
+    "address": "0xeb6F7B997c0020f5C0334815d9BEAAB661bCfEf6",
+    "name": "BigBot",
+    "symbol": "BIGBOT",
+    "decimals": 6,
+    "totalSupplyHuman": 8315002026,
+    "totalSupplyRaw": "8315002026000000",
+    "deployer": "0x44f4F9F703fCA7A81a108e6485d391476F2c30B9",
+    "deployTxHash": "0xf5963f88359f6d7b9135c9f9ed1539234b4741913cdc1a6ab4592800bfa7154b",
+    "blockNumber": 27610213,
+    "compiler": {
+      "solc": "0.8.20",
+      "optimizer": true,
+      "optimizerRuns": 200
+    },
+    "bytecodeSha256": "4b5cbd31a8420d3326f14ae8d70bf3991bee97593712ca2d7aa2e986fa2b0ef8",
+    "explorerUrl": "https://scan.pulsechain.com/address/0xeb6F7B997c0020f5C0334815d9BEAAB661bCfEf6",
+    "notes": [
+      "Fixed supply minted once to deployer; no further mint",
+      "No owner, no tax, no blacklist, no pause"
+    ]
+  },
+  "vaultArmor": {
+    "status": "testnet_only",
+    "mainnet": false,
+    "network": {
+      "name": "PulseChain Testnet V4",
+      "chainId": 943,
+      "rpc": [
+        "https://rpc.v4.testnet.pulsechain.com",
+        "https://pulsechain-testnet-rpc.publicnode.com"
+      ],
+      "explorer": "https://scan.v4.testnet.pulsechain.com",
+      "native": "tPLS"
+    },
+    "addresses": {
+      "factory": "0xa39f82C2C3efDa612f77238A12aA2a694aFD09c9",
+      "vault": "0x3A92c476FC72a83876da2FE9fa2acba2FCc2D297",
+      "mockSignal": "0xeb6F7B997c0020f5C0334815d9BEAAB661bCfEf6",
+      "mockTreasury": "0x7dBD7179838ae4Ada8DcEcFd18F68BE9AB4EAEA7"
+    },
+    "roles": {
+      "operator": "0x44f4F9F703fCA7A81a108e6485d391476F2c30B9",
+      "keyMaster": "0x1355d45fe2389eD8d5a5FA81e07259CF82C76305",
+      "trapAddress": "0x2fe9e73a524fE09bD7758D2F25aF9b4B70f2D865",
+      "allowedExit": "0xF17bef05650C80380754173918535C13BF7F938C",
+      "signalSink": "0x44f4F9F703fCA7A81a108e6485d391476F2c30B9"
+    },
+    "params": {
+      "minArmDelay": 45,
+      "armTTL": 600,
+      "maxWithdrawBpsPerArm": 5000,
+      "maxArmsPerDay": 10,
+      "signalAmount": 1000000,
+      "signalDecimals": 6
+    },
+    "txs": {
+      "deploy_MockSignal": "0xec07248bbeff843f70c927f7315c86aed1661045694246a5ec149f429e512970",
+      "deploy_MockTreasury": "0x53ee69fa54d60279e9a85ebad1c023e7994ac193e26e4d0000998a7fc6ef34b7",
+      "deploy_Factory": "0x1217ee330fd789ff1340e443feccb619ff45d1c281601425a0c14b05987c1cc0",
+      "createVault": "0xb5298053817d321973dc3b65ffb68f4bb258c7feaf9991a15867994f5c825592",
+      "arm": "0x4920831b530341f9ceb7dd8d1f7eeffd597f2f4e77d32c3e661bf264ec404c97",
+      "withdraw": "0x7a28787c0bfaf702350a47753b36cd0ddd0db9f64464a04a2f5643c8a20c5471",
+      "decoy_emergencyWithdraw": "0x8c171900b5eca611b15f702f318b526b5c3e1daf935bf585927df5da660f2c01"
+    },
+    "explorerUrls": {
+      "factory": "https://scan.v4.testnet.pulsechain.com/address/0xa39f82C2C3efDa612f77238A12aA2a694aFD09c9",
+      "vault": "https://scan.v4.testnet.pulsechain.com/address/0x3A92c476FC72a83876da2FE9fa2acba2FCc2D297"
+    },
+    "notes": [
+      "TESTNET ONLY \u2014 Vault Armor is NOT deployed on PulseChain mainnet yet",
+      "mockSignal on testnet may share the same address as mainnet BIGBOT (different chainId)",
+      "operator != keyMaster required for meaningful security"
+    ]
+  }
+}
