@@ -10,7 +10,7 @@ Als de bot geld wil opnemen, gebeurt het volgende. Eerst zet de sleutelbewaarder
 
 De kluis heeft ook valfuncties. Dat zijn nepknoppen die eruitzien als een achterdeur. Als een dievenprogramma ze probeert te gebruiken, loopt het in de val en krijgt het het geld niet.
 
-Waar haalt een bot zijn BigBot vandaan? Uit een dispenser, een soort snoepautomaat. Je stopt er PLS in, de munt van PulseChain, en je krijgt BigBot tegen een vaste prijs. Het voorstel is 1.000 PLS per BigBot. De automaat koopt nooit terug, dus je kunt hem niet gebruiken om goedkoop te kopen en duur te verkopen. De prijs kan alleen omhoog, nooit omlaag. Elk adres kan maximaal 369 BigBot kopen, en er is een daglimiet voor de hele automaat. Omdat de automaat altijd voor dezelfde prijs verkoopt, betaalt niemand ergens anders meer zolang er nog voorraad is, en dat remt speculanten af.
+Waar haalt een bot zijn BigBot vandaan? Uit een dispenser, een soort snoepautomaat. Je stopt er PLS in, de munt van PulseChain, en je krijgt BigBot tegen een vaste prijs. Het voorstel is 1.000 PLS per BigBot. De automaat koopt nooit terug, dus je kunt hem niet gebruiken om goedkoop te kopen en duur te verkopen. De prijs kan alleen omhoog, nooit omlaag. Elk adres kan maximaal 369 BigBot kopen, en er is een daglimiet voor de hele automaat. Als een eenmalige voucher: één per persoon, niet stapelen. Omdat de automaat altijd voor dezelfde prijs verkoopt, betaalt niemand ergens anders meer zolang er nog voorraad is, en dat remt speculanten af.
 
 Als een bot zijn kluis aanmaakt, worden er 50 BigBot verbrand. Hoe meer het systeem wordt gebruikt, hoe minder BigBot er dus overblijven.
 
