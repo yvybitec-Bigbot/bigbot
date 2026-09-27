@@ -30,7 +30,7 @@ Una batería de 17 pruebas sobre `BigBotDispenser` (dos instancias) y `BotVaultF
 | 1 | `buy_within_cap_ScenarioB` | Scenario B dispenser: buy 2 BIGBOT at 1000 tPLS each |  | [`0x30340cd3bd…`](https://scan.v4.testnet.pulsechain.com/tx/0x30340cd3bd2e9d9a8f89732a0ca39a4e5ad065cc617438bfcf86ed5ad1083836) | ✅ PASS |
 | 2 | `buy_over_cap_reverts` | Scenario B: buy beyond 369/address cap reverts | reverted `CapAddress` (`0xceba5aef`) | — (eth_call revert, no tx) | ✅ PASS |
 | 3 | `buyer_buy_cheap` | Cheap dispenser (1 tPLS/BIGBOT): buyer purchase |  | [`0xe3d9fa8db8…`](https://scan.v4.testnet.pulsechain.com/tx/0xe3d9fa8db822391b7e96392fa5016610404c9e8de57a57f8208e72b92aca6117) | ✅ PASS |
-| 4 | `buy_over_cap_cheap_reverts` | Cheap dispenser: buy after filling cap reverts ¹ | reverted `InsufficientPLS` (`0x2b6d5420`) | — (eth_call revert, no tx) | ✅ PASS |
+| 4 | `buy_over_cap_cheap_reverts` | Cheap dispenser: buy after filling cap reverts ¹ | reverted `CapAddress` (`0xceba5aef`) with exact payment | [0x6078a8fc…](https://scan.v4.testnet.pulsechain.com/tx/0x6078a8fcc6128ff34268417c92c953cfd35e6ade009c0b006a188368ac0eac64) (reverted, status 0) | ✅ PASS |
 | 5 | `pause_blocks_buys` | Owner pauses; buy reverts while paused | reverted `PausedErr` (`0xda829339`) | [`0x78c0e31226…`](https://scan.v4.testnet.pulsechain.com/tx/0x78c0e3122624d3ac7ab6479ca631f6039d39e073f07fcff65db5ebfed52d8e04) (pause tx) | ✅ PASS |
 | 6 | `unpause_ok` | Owner unpauses |  | [`0x1104de9619…`](https://scan.v4.testnet.pulsechain.com/tx/0x1104de96190d9fcf5d8e2d5964a46641c0160d2154594b716918b159a01fe39a) | ✅ PASS |
 | 7 | `setPrice_lower_reverts` | Lowering price reverts (priceOnlyIncrease) | reverted `PriceDecreaseForbidden` (`0x77055eca`) | — (eth_call revert, no tx) | ✅ PASS |
@@ -45,7 +45,7 @@ Una batería de 17 pruebas sobre `BigBotDispenser` (dos instancias) y `BotVaultF
 | 16 | `arm_burn_1` | Vault v2 arm burns 1 to 0x…dEaD |  | [`0xf93ad52cf2…`](https://scan.v4.testnet.pulsechain.com/tx/0xf93ad52cf26e2624724e93dfbef944ab1bd1d25144ae115b23f40f992c32e395) | ✅ PASS |
 | 17 | `withdraw_after_arm` | Operator withdraws to allowedExit after delay |  | [`0x1478754517…`](https://scan.v4.testnet.pulsechain.com/tx/0x14787545179c66a9879ad152ba5072cfc3bf1640a9b8ac4cd224021166bf16bb) | ✅ PASS |
 
-¹ Caveat: in test #4 the probe sent the wrong `msg.value` (price for 1 raw unit instead of 1 BIGBOT), so the revert came from the exact-payment check (`InsufficientPLS`), which runs before the cap check. Per-address cap enforcement is shown by test #2 (`CapAddress`). / Aviso: en la prueba #4 el revert vino de la comprobación de pago exacto, no del tope; el tope por dirección queda demostrado en la prueba #2.
+¹ Rerun on 2026-09-27 with the exact payment (1 BIGBOT = 1e18 wei at 1 tPLS/BIGBOT): the buyer already at the 369 cap got `CapAddress`; tx [0x6078a8fc…](https://scan.v4.testnet.pulsechain.com/tx/0x6078a8fcc6128ff34268417c92c953cfd35e6ade009c0b006a188368ac0eac64). Control: a fresh address bought 1 BIGBOT with the same payment and succeeded, [0x18901993…](https://scan.v4.testnet.pulsechain.com/tx/0x189019931d8319cfb7756efb411a8844cd7d0d0ecb2e26a4a5577409e5a15ae0). The first run had reverted with `InsufficientPLS` because it sent the wrong amount; that result is superseded. / Repetida el 27-09-2026 pagando la cantidad exacta: la dirección que ya tenía 369 fue rechazada por `CapAddress`; una dirección nueva compró con el mismo pago sin problema. Solo red de pruebas.
 
 Revert-path tests were checked via `eth_call`/gas estimation, so they have no on-chain tx.
 
