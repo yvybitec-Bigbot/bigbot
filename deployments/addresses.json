@@ -84,5 +84,105 @@
       "mockSignal on testnet may share the same address as mainnet BIGBOT (different chainId)",
       "operator != keyMaster required for meaningful security"
     ]
+  },
+  "vaultArmorV2Testnet": {
+    "status": "testnet_only",
+    "mainnet": false,
+    "network": {
+      "name": "PulseChain Testnet V4",
+      "chainId": 943,
+      "rpc": [
+        "https://rpc.v4.testnet.pulsechain.com",
+        "https://pulsechain-testnet-rpc.publicnode.com"
+      ],
+      "explorer": "https://scan.v4.testnet.pulsechain.com",
+      "native": "tPLS"
+    },
+    "addresses": {
+      "dispenserScenarioB": "0x813b35Ae3a79B798916be0b76DD3c7b5AAAEDB26",
+      "dispenserCheap": "0x1796Fd37B1a010E2a3A700b2BB3f18Cb3D9cC9D5",
+      "factoryV2": "0x60e7C9BfF5FD5315ea8f82aEE4b9Df1B3BD1B44a",
+      "vaultV2": "0x6b136bC4f46dD6FcaB4728633fbc88CfCBbd7D0a",
+      "mockSignal": "0xeb6F7B997c0020f5C0334815d9BEAAB661bCfEf6",
+      "mockTreasury": "0x7dBD7179838ae4Ada8DcEcFd18F68BE9AB4EAEA7",
+      "burnSink": "0x000000000000000000000000000000000000dEaD"
+    },
+    "roles": {
+      "owner": "0x44f4F9F703fCA7A81a108e6485d391476F2c30B9",
+      "operator": "0x44f4F9F703fCA7A81a108e6485d391476F2c30B9",
+      "keyMaster": "0x884C7EBB7672229f73038B904912D6A4F14DC48E",
+      "trapAddress": "0x2fe9e73a524fE09bD7758D2F25aF9b4B70f2D865",
+      "allowedExit": "0xF17bef05650C80380754173918535C13BF7F938C"
+    },
+    "params": {
+      "dispenserScenarioB": {
+        "priceTplsPerBigbot": 1000,
+        "pricePerRaw": "1000000000000000",
+        "maxPerAddress": 369,
+        "maxPerDayGlobal": 20000,
+        "stock": 2000000,
+        "priceOnlyIncrease": true
+      },
+      "dispenserCheap": {
+        "priceTplsPerBigbot": 1,
+        "maxPerAddress": 369,
+        "maxPerDayGlobal": 20000,
+        "stock": 10000,
+        "priceOnlyIncrease": true
+      },
+      "burnPerArm": 1,
+      "burnPerCreateVault": 50,
+      "signalAmountRaw": 1000000,
+      "createBurnAmountRaw": 50000000,
+      "minArmDelay": 15,
+      "armTTL": 600,
+      "maxWithdrawBpsPerArm": 5000,
+      "maxArmsPerDay": 10,
+      "signalDecimals": 6
+    },
+    "compiler": {
+      "solc": "0.8.20",
+      "optimizer": true,
+      "optimizerRuns": 200,
+      "viaIR": true
+    },
+    "txs": {
+      "fund_buyer": "0xb3b611951ae07eb35365a1c95a3ba2524eea41e0083d31cfe6c2b435d3d29eb4",
+      "mint_signal": "0x716170a285c228e0ad9ac7e9bdf28264926a9eec3189f7fe0c22ec5fa323a01d",
+      "deploy_Dispenser_B": "0x47ac85f704887c450ce62aa862b2c43fb3f67bf994f86cb05a5275e7175257ba",
+      "deploy_Dispenser_Cheap": "0xa4e7dae8386adcb595b7e92fec517516e4c4ddf948598b58968fab177f8a1574",
+      "stock_B": "0xd06e1d82ee7246ddcd0703d3eac2e22e59db0bc5c993de247bafab3f2870ae9b",
+      "stock_Cheap": "0x0bd41a5304cb89a6ffd425c7919272c78d6ff934036a06bfc408ec7528f1c2f0",
+      "deploy_Factory_v2": "0x27c5590f7a06647af4e8a7cc0f84a973dd758df4dee0b85315cefa2a0adc4efc",
+      "buy_within_cap_B": "0x30340cd3bd2e9d9a8f89732a0ca39a4e5ad065cc617438bfcf86ed5ad1083836",
+      "buyer_buy_cheap": "0xe3d9fa8db822391b7e96392fa5016610404c9e8de57a57f8208e72b92aca6117",
+      "buyer_fill_cap": "0xdd252fd5e0787fc83d9021bdd2eac3606145d5830bac56374dc2cd1984c1cf4e",
+      "pause_B": "0x78c0e3122624d3ac7ab6479ca631f6039d39e073f07fcff65db5ebfed52d8e04",
+      "unpause_B": "0x1104de96190d9fcf5d8e2d5964a46641c0160d2154594b716918b159a01fe39a",
+      "setPrice_higher": "0xc7d6cf9dfb55dba49958252efbfcaa05a2d0b79cdfcc276f3cd6a07d1ce51847",
+      "withdraw_PLS_B": "0xb0a0015565da9d6de880ac05055254ec0bd706b71686a89cf53a64fb3c910941",
+      "withdraw_BIGBOT_B": "0x1bdb756dfeb19af025bb7a558c9f5ffc8b522cbad4456a0996bf0bfd36355d95",
+      "createVault_v2": "0xd056d0e62853b9c1b6eb537a64b7c50036c286d53b385635145020a8696b3220",
+      "deposit_treasury": "0x4dd3cea6850dc49af9bb156064c6206e5b39a176317d3c3dcfb326ffebe68fc4",
+      "arm_v2": "0xf93ad52cf26e2624724e93dfbef944ab1bd1d25144ae115b23f40f992c32e395",
+      "withdraw_v2": "0x14787545179c66a9879ad152ba5072cfc3bf1640a9b8ac4cd224021166bf16bb"
+    },
+    "tests": {
+      "passed": 17,
+      "total": 17,
+      "doc": "docs/TESTNET_V4_RESULTS.md"
+    },
+    "explorerUrls": {
+      "dispenserScenarioB": "https://scan.v4.testnet.pulsechain.com/address/0x813b35Ae3a79B798916be0b76DD3c7b5AAAEDB26",
+      "dispenserCheap": "https://scan.v4.testnet.pulsechain.com/address/0x1796Fd37B1a010E2a3A700b2BB3f18Cb3D9cC9D5",
+      "factoryV2": "https://scan.v4.testnet.pulsechain.com/address/0x60e7C9BfF5FD5315ea8f82aEE4b9Df1B3BD1B44a",
+      "vaultV2": "https://scan.v4.testnet.pulsechain.com/address/0x6b136bC4f46dD6FcaB4728633fbc88CfCBbd7D0a"
+    },
+    "notes": [
+      "TESTNET ONLY \u2014 Dispenser and Vault Armor v2 are NOT deployed on PulseChain mainnet",
+      "mockSignal is a testnet MockERC20, NOT BIGBOT; it shares the mainnet BIGBOT address only because the same deployer had the same nonce on both chains",
+      "v2 burns = transfer to 0x...dEaD (token has no burn()); totalSupply does not decrease",
+      "minArmDelay=15s is a test value only"
+    ]
   }
 }

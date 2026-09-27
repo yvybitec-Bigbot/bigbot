@@ -109,9 +109,73 @@
       "vault": "https://scan.v4.testnet.pulsechain.com/address/0x3A92c476FC72a83876da2FE9fa2acba2FCc2D297"
     }
   },
+  "vaultArmorV2": {
+    "status": "testnet_only",
+    "label": "Bot Vault Armor v2 (burn on arm/create) + BigBotDispenser \u2014 PulseChain Testnet V4 ONLY (NOT on mainnet)",
+    "mainnetDeployed": false,
+    "network": {
+      "name": "PulseChain Testnet V4",
+      "chainId": 943,
+      "explorer": "https://scan.v4.testnet.pulsechain.com",
+      "native": "tPLS"
+    },
+    "addresses": {
+      "factoryV2": "0x60e7C9BfF5FD5315ea8f82aEE4b9Df1B3BD1B44a",
+      "vaultV2": "0x6b136bC4f46dD6FcaB4728633fbc88CfCBbd7D0a",
+      "dispenserScenarioB": "0x813b35Ae3a79B798916be0b76DD3c7b5AAAEDB26",
+      "mockSignal": "0xeb6F7B997c0020f5C0334815d9BEAAB661bCfEf6",
+      "mockSignalNote": "testnet MockERC20, not BIGBOT (same address as mainnet BIGBOT by deployer-nonce coincidence)",
+      "burnSink": "0x000000000000000000000000000000000000dEaD"
+    },
+    "params": {
+      "burnPerArm": 1,
+      "burnPerCreateVault": 50,
+      "dispenserPricePlsPerBigbot": 1000,
+      "dispenserMaxPerAddress": 369,
+      "dispenserMaxPerDay": 20000,
+      "dispenserStock": 2000000,
+      "priceOnlyIncrease": true
+    },
+    "events": {
+      "factory": [
+        "VaultCreated",
+        "CreateBurned"
+      ],
+      "vault": [
+        "Deposited",
+        "Armed",
+        "Burned",
+        "Withdrawn",
+        "TrapTriggered",
+        "Frozen"
+      ],
+      "dispenser": [
+        "Bought",
+        "PriceUpdated",
+        "Paused",
+        "WithdrawnPLS",
+        "WithdrawnBIGBOT",
+        "MaxPerDayUpdated",
+        "OwnershipTransferred"
+      ]
+    },
+    "sources": {
+      "dispenser": "contracts/dispenser/BigBotDispenser.sol",
+      "vault": "contracts/vault/v2/BotVault_v2.sol",
+      "factory": "contracts/vault/v2/BotVaultFactory_v2.sol"
+    },
+    "docs": [
+      "docs/DISPENSER_AND_BURN.md",
+      "docs/TESTNET_V4_RESULTS.md"
+    ],
+    "tests": "17/17 PASS on Testnet V4"
+  },
   "abiPaths": {
     "BigBot": "abis/BigBot.json",
     "BotVault": "abis/BotVault.json",
-    "BotVaultFactory": "abis/BotVaultFactory.json"
+    "BotVaultFactory": "abis/BotVaultFactory.json",
+    "BigBotDispenser": "abis/BigBotDispenser.json",
+    "BotVault_v2": "abis/BotVault_v2.json",
+    "BotVaultFactory_v2": "abis/BotVaultFactory_v2.json"
   }
 }

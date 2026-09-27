@@ -21,12 +21,24 @@
 - Source: /contracts/vault/
 - Descriptor: /.well-known/bigbot-vault.json
 
+## Dispenser + Vault Armor v2 (testnet only)
+
+- Chain: PulseChain Testnet V4, chainId 943 — NOT deployed on mainnet
+- BigBotDispenser (fixed price, no buyback): 0x813b35Ae3a79B798916be0b76DD3c7b5AAAEDB26
+- BotVaultFactory v2: 0x60e7C9BfF5FD5315ea8f82aEE4b9Df1B3BD1B44a
+- BotVault v2: 0x6b136bC4f46dD6FcaB4728633fbc88CfCBbd7D0a
+- v2 burns 1 BIGBOT per arm and 50 per vault creation (to 0x...dEaD)
+- Source: /contracts/dispenser/, /contracts/vault/v2/
+- Tests: 17/17 PASS on testnet (/docs/TESTNET_V4_RESULTS.md)
+
 ## Docs
 
 - /README.md
 - /AGENTS.md
 - /docs/BOT_VAULT_ARMOR_v1.md
 - /docs/BIGBOT_KEY_RAIL_v0.md
+- /docs/DISPENSER_AND_BURN.md
+- /docs/TESTNET_V4_RESULTS.md
 - /deployments/addresses.json
 - /abis/
 

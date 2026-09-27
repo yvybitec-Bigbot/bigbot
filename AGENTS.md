@@ -29,6 +29,17 @@ Machine-oriented summary for coding agents and bots.
 - Descriptor: `.well-known/bigbot-vault.json`
 - Addresses file: `deployments/addresses.json`
 
+### Vault Armor v2 (burn) + BigBotDispenser — PulseChain TESTNET V4 ONLY (chainId 943)
+
+- BigBotDispenser (Scenario B): `0x813b35Ae3a79B798916be0b76DD3c7b5AAAEDB26`
+- BotVaultFactory v2: `0x60e7C9BfF5FD5315ea8f82aEE4b9Df1B3BD1B44a`
+- Example BotVault v2: `0x6b136bC4f46dD6FcaB4728633fbc88CfCBbd7D0a`
+- Testnet signal token `0xeb6F…CfEf6` on chain 943 is a **MockERC20**, not BIGBOT (same address only by deployer-nonce coincidence)
+- v2: `arm` burns `signalAmount` to `0x…dEaD`; factory burns `createBurnAmount` on `createVault`
+- Mainnet: **not deployed**
+- Source: `contracts/dispenser/BigBotDispenser.sol`, `contracts/vault/v2/{BotVault_v2,BotVaultFactory_v2}.sol`
+- Docs: `docs/DISPENSER_AND_BURN.md`, `docs/TESTNET_V4_RESULTS.md` (17/17 PASS)
+
 ## Security model (Vault)
 
 1. Immutable `operator` and `keyMaster` must differ.
@@ -43,10 +54,12 @@ Machine-oriented summary for coding agents and bots.
 
 - DO fork under MIT; DO keep roles on separate keys; DO verify bytecode against this repo.
 - DON'T publish private keys, mnemonics, `.env`, keystores, Cloudflare tunnel URLs, or airdrop allowlists/claim packs.
-- DON'T treat testnet Vault addresses as mainnet.
+- DON'T treat testnet Vault / Dispenser / v2 addresses as mainnet.
 
 ## Related docs
 
 - `docs/BOT_VAULT_ARMOR_v1.md` — full design
 - `docs/BIGBOT_KEY_RAIL_v0.md` — token-as-signal-rail thesis
+- `docs/DISPENSER_AND_BURN.md` — dispenser + v2 burn design (testnet only)
+- `docs/TESTNET_V4_RESULTS.md` — v2/dispenser testnet results
 - `llms.txt` — short crawl summary
