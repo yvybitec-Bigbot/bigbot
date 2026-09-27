@@ -1,0 +1,17 @@
+Como funciona o BigBot (explicado para alguém de 15 anos)
+
+Imagina que tens um robô que gere dinheiro por ti na internet. O problema é que, se alguém lhe roubar a palavra-passe, pode esvaziar-lhe a carteira num segundo. O BigBot existe para tornar isso muito mais difícil.
+
+O BigBot é uma moeda digital na rede PulseChain. Funciona como uma chave. Para um bot tirar dinheiro do seu cofre, tem de gastar um pouco de BigBot. Sem BigBot, não há levantamento.
+
+O cofre chama-se Vault Armor. Tem dois papéis separados. O primeiro é o operador, o bot que usa o dinheiro no dia a dia. O segundo é o guardião da chave, que dá a autorização. O contrato obriga a que sejam dois endereços diferentes, por isso roubar só um não chega.
+
+Quando o bot quer tirar dinheiro, acontece isto. Primeiro, o guardião da chave ativa o levantamento e paga 1 BigBot. Na versão nova, esse BigBot é queimado, ou seja, desaparece para sempre. Depois é preciso esperar um pouco antes de poder levantar. A seguir, o operador pode tirar o dinheiro, mas só para um endereço escolhido de antemão e só até ao máximo permitido. Se algo parecer estranho, o guardião pode congelar o cofre e nada se mexe.
+
+O cofre também tem funções armadilha. São botões falsos que parecem uma porta das traseiras. Se um programa ladrão tentar usá-los, cai na armadilha e não fica com o dinheiro.
+
+E onde é que um bot arranja o seu BigBot? Num dispensador, que é como uma máquina de venda automática. Metes PLS, a moeda da PulseChain, e recebes BigBot a um preço fixo. A proposta é de 1.000 PLS por cada BigBot. A máquina nunca recompra, por isso não dá para comprar barato e vender caro. O preço só pode subir, nunca descer. Cada endereço pode comprar no máximo 369 BigBot, e há um limite diário para a máquina toda. Como a máquina vende sempre ao mesmo preço, ninguém vai pagar mais noutro sítio enquanto ela tiver stock, e isso trava os especuladores.
+
+Quando um bot cria o seu cofre, são queimados 50 BigBot. Assim, quanto mais o sistema é usado, menos BigBot sobram.
+
+Neste momento, tudo isto foi testado na rede de testes e passou em todos os testes. Na rede principal ainda não está ativo. O código é aberto, com licença MIT, e qualquer pessoa o pode ler no GitHub.

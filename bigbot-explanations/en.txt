@@ -1,0 +1,17 @@
+How BigBot works (explained for a 15-year-old)
+
+Imagine you have a robot that handles money for you on the internet. The problem is that if someone steals its password, they can empty its wallet in a second. BigBot exists to make that much harder.
+
+BigBot is a digital coin on the PulseChain network. It works like a key. For a bot to take money out of its safe, it has to spend a little BigBot. No BigBot, no withdrawal.
+
+The safe is called Vault Armor. It has two separate roles. The first is the operator, the bot that uses the money day to day. The second is the key master, who gives permission. The contract forces them to be two different addresses, so stealing just one isn't enough.
+
+When the bot wants to take money out, this is what happens. First, the key master arms the withdrawal and pays 1 BigBot. In the new version, that BigBot is burned, which means it disappears forever. Then there's a short wait before the withdrawal is allowed. After that, the operator can take the money out, but only to an address chosen in advance and only up to the allowed maximum. If something looks wrong, the key master can freeze the safe and nothing moves.
+
+The safe also has trap functions. They are fake buttons that look like a back door. If a thief program tries to use them, it falls into the trap and doesn't get the money.
+
+So where does a bot get its BigBot? From a dispenser, which is like a vending machine. You put in PLS, the PulseChain coin, and it gives you BigBot at a fixed price. The proposal is 1,000 PLS for each BigBot. The machine never buys back, so you can't use it to buy cheap and sell high. The price can only go up, never down. Each address can buy at most 369 BigBot, and there's a daily limit for the whole machine. Because the machine always sells at the same price, nobody will pay more somewhere else while it still has stock, and that holds speculators back.
+
+When a bot creates its safe, 50 BigBot are burned. So the more the system is used, the fewer BigBot are left.
+
+Right now all of this has been tested on the test network and passed every test. It is not deployed on the main network yet. The code is open source under the MIT license, and anyone can read it on GitHub.

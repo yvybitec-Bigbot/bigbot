@@ -1,0 +1,17 @@
+Hoe BigBot werkt (uitgelegd voor iemand van 15)
+
+Stel je voor dat je een robot hebt die op internet geld voor je beheert. Het probleem is dat als iemand zijn wachtwoord steelt, diegene zijn portemonnee in één seconde kan leeghalen. BigBot bestaat om dat veel moeilijker te maken.
+
+BigBot is een digitale munt op het PulseChain-netwerk. Hij werkt als een sleutel. Om geld uit zijn kluis te halen, moet een bot een klein beetje BigBot uitgeven. Geen BigBot, geen opname.
+
+De kluis heet Vault Armor. Er zijn twee aparte rollen. De eerste is de operator, de bot die het geld dagelijks gebruikt. De tweede is de sleutelbewaarder, die toestemming geeft. Het contract dwingt af dat het twee verschillende adressen zijn, dus één adres stelen is niet genoeg.
+
+Als de bot geld wil opnemen, gebeurt het volgende. Eerst zet de sleutelbewaarder de opname klaar en betaalt 1 BigBot. In de nieuwe versie wordt die BigBot verbrand, dat wil zeggen dat hij voor altijd verdwijnt. Daarna moet je even wachten voordat de opname mag. Dan kan de operator het geld opnemen, maar alleen naar een adres dat vooraf is gekozen en alleen tot het toegestane maximum. Als er iets niet klopt, kan de sleutelbewaarder de kluis bevriezen en beweegt er niets.
+
+De kluis heeft ook valfuncties. Dat zijn nepknoppen die eruitzien als een achterdeur. Als een dievenprogramma ze probeert te gebruiken, loopt het in de val en krijgt het het geld niet.
+
+Waar haalt een bot zijn BigBot vandaan? Uit een dispenser, een soort snoepautomaat. Je stopt er PLS in, de munt van PulseChain, en je krijgt BigBot tegen een vaste prijs. Het voorstel is 1.000 PLS per BigBot. De automaat koopt nooit terug, dus je kunt hem niet gebruiken om goedkoop te kopen en duur te verkopen. De prijs kan alleen omhoog, nooit omlaag. Elk adres kan maximaal 369 BigBot kopen, en er is een daglimiet voor de hele automaat. Omdat de automaat altijd voor dezelfde prijs verkoopt, betaalt niemand ergens anders meer zolang er nog voorraad is, en dat remt speculanten af.
+
+Als een bot zijn kluis aanmaakt, worden er 50 BigBot verbrand. Hoe meer het systeem wordt gebruikt, hoe minder BigBot er dus overblijven.
+
+Op dit moment is alles getest op het testnetwerk en zijn alle tests geslaagd. Op het hoofdnetwerk staat het nog niet. De code is open source onder de MIT-licentie en iedereen kan hem op GitHub lezen.

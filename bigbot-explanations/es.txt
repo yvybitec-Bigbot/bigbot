@@ -1,0 +1,17 @@
+Cómo funciona BigBot (explicado para alguien de 15 años)
+
+Imagina que tienes un robot que maneja dinero por ti en internet. El problema es que si alguien le roba su contraseña, puede vaciarle la cartera en un segundo. BigBot existe para que eso sea mucho más difícil.
+
+BigBot es una moneda digital en la red PulseChain. Funciona como una llave. Para que un bot pueda sacar dinero de su caja fuerte, tiene que gastar un poco de BigBot. Sin BigBot, no hay retiro.
+
+La caja fuerte se llama Vault Armor. Tiene dos personajes distintos. El primero es el operador, que es el bot que usa el dinero en su día a día. El segundo es el guardián de la llave, que es quien da permiso. El contrato obliga a que sean dos direcciones diferentes, así que robar una sola no basta.
+
+Cuando el bot quiere sacar dinero, pasa esto. Primero, el guardián de la llave activa el retiro y paga 1 BigBot. En la versión nueva, ese BigBot se quema, es decir, desaparece para siempre. Después hay que esperar un rato corto antes de poder retirar. Luego, el operador puede sacar el dinero, pero solo a una dirección que se decidió de antemano y solo hasta el máximo permitido. Si algo huele raro, el guardián puede congelar la caja y nadie mueve nada.
+
+Además, la caja tiene funciones trampa. Son botones falsos que parecen una puerta trasera. Si un programa ladrón intenta usarlos, cae en la trampa y no consigue el dinero.
+
+¿Y de dónde saca un bot su BigBot? De un dispensador, que es como una máquina expendedora. Metes PLS, la moneda de PulseChain, y te da BigBot a un precio fijo. La propuesta es de 1.000 PLS por cada BigBot. La máquina nunca recompra, así que no sirve para comprar barato y vender caro. El precio solo puede subir, nunca bajar. Cada dirección puede comprar como máximo 369 BigBot, y hay un límite diario para toda la máquina. Como la máquina siempre vende al mismo precio, nadie pagará más en otro sitio mientras le quede stock, y eso frena a los especuladores.
+
+Cuando un bot crea su caja fuerte, se queman 50 BigBot. Así, cuanto más se usa el sistema, menos BigBot quedan.
+
+Hoy todo esto está probado en la red de pruebas y ha pasado todas las pruebas. En la red principal todavía no está desplegado. El código es abierto, con licencia MIT, y cualquiera puede leerlo en GitHub.

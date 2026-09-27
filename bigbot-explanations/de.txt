@@ -1,0 +1,17 @@
+Wie BigBot funktioniert (erklärt für eine 15-jährige Person)
+
+Stell dir vor, du hast einen Roboter, der im Internet Geld für dich verwaltet. Das Problem ist: Wenn jemand sein Passwort stiehlt, kann er seine Geldbörse in einer Sekunde leeren. BigBot gibt es, damit das viel schwieriger wird.
+
+BigBot ist eine digitale Münze im PulseChain-Netzwerk. Sie funktioniert wie ein Schlüssel. Damit ein Bot Geld aus seinem Tresor holen kann, muss er ein bisschen BigBot ausgeben. Ohne BigBot keine Auszahlung.
+
+Der Tresor heißt Vault Armor. Es gibt zwei getrennte Rollen. Die erste ist der Operator, also der Bot, der das Geld im Alltag benutzt. Die zweite ist der Schlüsselmeister, der die Erlaubnis gibt. Der Vertrag verlangt, dass es zwei verschiedene Adressen sind, also reicht es nicht, nur eine zu stehlen.
+
+Wenn der Bot Geld abheben will, passiert Folgendes. Zuerst schaltet der Schlüsselmeister die Auszahlung frei und zahlt 1 BigBot. In der neuen Version wird dieser BigBot verbrannt, das heißt, er verschwindet für immer. Dann muss man kurz warten, bevor die Auszahlung erlaubt ist. Danach kann der Operator das Geld abheben, aber nur an eine vorher festgelegte Adresse und nur bis zum erlaubten Höchstbetrag. Wenn etwas komisch aussieht, kann der Schlüsselmeister den Tresor einfrieren, und nichts bewegt sich.
+
+Der Tresor hat außerdem Fallenfunktionen. Das sind falsche Knöpfe, die wie eine Hintertür aussehen. Wenn ein Diebesprogramm sie benutzt, tappt es in die Falle und bekommt das Geld nicht.
+
+Woher bekommt ein Bot seinen BigBot? Aus einem Spender, so ähnlich wie ein Getränkeautomat. Du wirfst PLS ein, die Münze von PulseChain, und bekommst BigBot zu einem festen Preis. Der Vorschlag ist 1.000 PLS pro BigBot. Der Automat kauft nie zurück, also kann man damit nicht billig kaufen und teuer verkaufen. Der Preis kann nur steigen, nie fallen. Jede Adresse kann höchstens 369 BigBot kaufen, und es gibt ein Tageslimit für den ganzen Automaten. Weil der Automat immer zum gleichen Preis verkauft, zahlt niemand woanders mehr, solange er noch Vorrat hat, und das bremst Spekulanten.
+
+Wenn ein Bot seinen Tresor erstellt, werden 50 BigBot verbrannt. Je mehr das System benutzt wird, desto weniger BigBot bleiben übrig.
+
+Im Moment ist alles im Testnetzwerk getestet und hat alle Tests bestanden. Im Hauptnetzwerk ist es noch nicht im Einsatz. Der Code ist Open Source unter der MIT-Lizenz, und jeder kann ihn auf GitHub lesen.

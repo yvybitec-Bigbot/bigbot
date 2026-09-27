@@ -1,0 +1,17 @@
+Wie BigBot funktioniert (erklärt für öpper mit 15)
+
+Stell der vor, du hesch en Roboter, wo im Internet Gäld für dich verwaltet. S Problem isch: Wänn öpper sis Passwort klaut, chan er sis Portemonnaie i einere Sekunde läär mache. BigBot gits, dass das vill schwiriger wird.
+
+BigBot isch e digitali Münz im PulseChain-Netzwerk. Si funktioniert wie en Schlüssel. Damit en Bot Gäld us sim Tresor usenä chan, muess er es bitzli BigBot usgäh. Ohni BigBot kei Uszahlig.
+
+De Tresor heisst Vault Armor. Es git zwei getrennti Rolle. Di erscht isch de Operator, also de Bot, wo s Gäld im Alltag bruucht. Di zweit isch de Schlüsselmeister, wo d Erlaubnis git. De Vertrag verlangt, dass es zwei verschideni Adrässe sind, also längts nöd, nur eini z klaue.
+
+Wänn de Bot Gäld abhebe wott, passiert das. Zerscht schaltet de Schlüsselmeister d Uszahlig frei und zahlt 1 BigBot. I de neue Version wird dä BigBot verbrännt, das heisst, er verschwindet für immer. Dänn muess mer churz warte, bis d Uszahlig erlaubt isch. Nachher chan de Operator s Gäld abhebe, aber nur uf e Adrässe, wo mer vorher feschtgleit hät, und nur bis zum erlaubte Maximum. Wänn öppis komisch uusgseht, chan de Schlüsselmeister de Tresor iifriere, und nüt bewegt sich.
+
+De Tresor hät au Fallefunktione. Das sind falschi Chnöpf, wo wie e Hindertür uusgsehnd. Wänn es Diebesprogramm si probiert z bruuche, tappt s i d Falle und überchunnt s Gäld nöd.
+
+Und wo überchunnt en Bot sin BigBot här? Us eme Spänder, öppe wie en Getränkeautomat. Du wirfsch PLS ii, d Münz vo PulseChain, und überchunnsch BigBot zu eme feschte Pris. De Vorschlag isch 1000 PLS pro BigBot. De Automat chauft nie zrugg, also chasch damit nöd billig chaufe und tüür verchaufe. De Pris chan nur stiige, nie sinke. Jedi Adrässe chan höchschtens 369 BigBot chaufe, und es git es Tageslimit für de ganz Automat. Will de Automat immer zum glichä Pris verchauft, zahlt niemer anderswo meh, solang er no Vorrat hät, und das bremst d Spekulante.
+
+Wänn en Bot sin Tresor erstellt, werded 50 BigBot verbrännt. Je meh s System bruucht wird, desto weniger BigBot bliibed übrig.
+
+Im Moment isch alles im Testnetzwerk tested und hät alli Tests bestande. Im Hauptnetzwerk isch es no nöd im Iisatz. De Code isch Open Source under de MIT-Lizänz, und jede chan en uf GitHub läse.
